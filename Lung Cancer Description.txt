@@ -1,0 +1,52 @@
+Lung Cancer Classification using Convolutional Neural Networks (CNN)
+
+	This project aims to develop a deep learning model for the classification of lung cancer types based on medical imaging data. The model is trained using a variety of convolutional neural networks (CNN) architectures, including a custom CNN model and a pre-trained VGG16 model, to predict the following classes:
+
+1.Benign
+2.Malignant
+3.Adenocarcinoma
+4.Large Cell Carcinoma
+5.Normal
+6.Squamous Cell Carcinoma
+
+
+Key Features:
+
+Data Preprocessing: The dataset consists of grayscale images of lung tissues, which are loaded, resized, and normalized for training.
+
+Data Augmentation: Real-time data augmentation (flip, rotation, zoom) is applied to increase the robustness of the model and prevent overfitting.
+
+Model Architecture:
+Custom CNN model: The model consists of several convolutional layers, batch normalization, pooling, and dropout layers to improve classification accuracy and prevent overfitting.
+
+VGG16 Model: The VGG16 model is used as a baseline by leveraging transfer learning with pre-trained weights. The grayscale images are converted to RGB format to feed into the VGG16 model.
+
+K-Fold Cross-Validation: The dataset is split into 16 folds using K-Fold cross-validation to ensure the model generalizes well and to avoid overfitting on the training data.
+
+Callbacks: Early stopping and learning rate reduction are implemented to optimize training and prevent overfitting.
+
+Evaluation: The models are evaluated using standard classification metrics such as accuracy, precision, recall, and F1-score. Confusion matrices are generated to assess the performance of the models.
+
+Dataset:
+The dataset consists of labeled images from multiple classes of lung tissue samples. Images are classified into six categories:
+
+1.Benign
+2.Malignant
+3.Adenocarcinoma
+4.Large Cell Carcinoma
+5.Normal
+6.Squamous Cell Carcinoma
+
+Requirements:
+
+*TensorFlow 2.8
+*Keras
+*NumPy
+*Matplotlib
+*Seaborn
+*scikit-learn
+*PIL
+
+Results:
+	The classification report and confusion matrix for both the custom CNN model and the VGG16 model are displayed, showing the overall performance and accuracy for each fold.
+The VGG16 model's performance is also compared with the custom CNN model, demonstrating the effectiveness of transfer learning in this context.
